@@ -1,0 +1,48 @@
+wxPython is a wrapper for the cross-platform GUI API (often referred to as a "toolkit") wxWidgets.
+which is written in C++ for the Python programming language.
+It is one of the alternatives to Tkinter.
+It is implemented as a Python extension module (native code).
+
+
+Contents
+1	License
+2	History
+3	Example
+4	Project Phoenix
+5	Applications developed with wxPython
+6	References
+6.1	Citations
+6.2	Sources
+7	Further reading
+8	External links
+License
+Being a wrapper, wxPython uses the same free software licence used by wxWidgets (wxWindows License)[4]—which is approved by Free Software Foundation and Open Source Initiative.
+
+History
+wxPython was created when Robin Dunn needed a GUI to be deployed on HP-UX systems and also on Windows 3.1 within a few weeks. While evaluating commercial solutions, he ran across Python bindings for the wxWidgets toolkit. Thus, he learned Python and, in a short time, together with Harri Pasanen, became one of the main developers of wxPython, which grew from those initial bindings.
+
+The first versions of the wrapper were created by hand. However, soon the code base became very difficult to maintain and keep synchronized with wxWidgets releases. Later versions were created with SWIG, greatly decreasing the amount of work to update the wrapper. The first "modern" version was announced in 1998.[1]
+
+Example
+This is a simple "Hello world" module, depicting the creation of the two main objects in wxPython (the main window object and the application object), followed by passing the control to the event-driven system (by calling MainLoop()) which manages the user-interactive part of the program.
+
+#!/usr/bin/env python
+
+import wx
+
+app = wx.App(False)  # Create a new app, don't redirect stdout/stderr to a window.
+frame = wx.Frame(None, wx.ID_ANY, "Hello World") # A Frame is a top-level window.
+frame.Show(True)     # Show the frame.
+app.MainLoop()
+Project Phoenix
+Project Phoenix, which began in 2010, is an effort to clean up the wxPython implementation and in the process make it compatible with Python 3.[5] This project is a new implementation of wxPython, focused on improving speed, maintainability and extensibility. Just like "Classic" wxPython, it wraps the wxWidgets C++ toolkit and provides access to the user interface portions of the wx API, enabling Python applications to have a graphical user interface on Windows, Mac or Unix systems with a native look and feel and requiring very little, if any, platform-specific code.[6]
+
+Applications developed with wxPython
+BitTorrent, a peer-to-peer BitTorrent application
+Chandler, a personal information manager
+Editra, a multi-platform text editor
+Google Drive, desktop client for the Google cloud-based storage system[7]
+GRASS GIS, a free, open source geographical information system
+Métamorphose, a batch renamer
+Phatch, a photo batch processor
+PlayOnLinux and PlayOnMac, Wine front-ends
